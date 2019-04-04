@@ -1,0 +1,26 @@
+{
+  "name": "youtube-statistics",
+  "version": "0.0.1",
+  "description": "Youtube Statistics is a Javascript module to get youtube channels and videos statistics.",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaellaurindo/youtube-statistics-js.git"
+  },
+  "keywords": [
+    "channel",
+    "stats",
+    "statistics",
+    "video",
+    "youtube"
+  ],
+  "author": {
+    "name": "Rafael Laurindo",
+    "email": "rafaelfilholm@gmail.com",
+    "url": "https://rafaellaurindo.com.br"
+  },
+  "bugs": {
+    "url": "https://github.com/rafaellaurindo/youtube-statistics-js/issues"
+  },
+  "homepage": "https://github.com/rafaellaurindo/youtube-statistics-js#readme"
+}
