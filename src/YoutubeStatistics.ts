@@ -1,5 +1,5 @@
-import YoutubeServices from './services/YoutubeServices';
 import Channel from './models/Channel';
+import YoutubeServices from './services/YoutubeServices';
 
 class YoutubeStatistics {
 	private youtubeServices: YoutubeServices;
@@ -8,7 +8,7 @@ class YoutubeStatistics {
 		this.youtubeServices = new YoutubeServices();
 	}
 
-	async getChannel(channelId: string) {
+	public async getChannel(channelId: string) {
 		const response = await this.youtubeServices.getChannel(channelId);
 		const channel = await new Channel();
 		const channelData = await channel.parse(response.data);

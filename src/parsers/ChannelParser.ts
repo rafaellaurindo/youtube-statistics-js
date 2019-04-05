@@ -11,7 +11,7 @@ class ChannelParser {
 		viewsTotal: '.subscribed'
 	};
 
-	async parse(pageContent: string): Promise<any> {
+	public async parse(pageContent: string): Promise<any> {
 		const $ = await cheerio.load(pageContent);
 		return {
 			description: await this.getTextFromElement($(this.selectors.description)),
