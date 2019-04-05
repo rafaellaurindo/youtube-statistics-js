@@ -2,12 +2,27 @@
   "name": "youtube-statistics",
   "version": "0.0.1",
   "description": "Youtube Statistics is a Javascript module to get youtube channels and videos statistics.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/* "
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rafaellaurindo/youtube-statistics-js.git"
   },
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+
+  },
   "keywords": [
+    "analytics",
     "channel",
     "stats",
     "statistics",
@@ -22,5 +37,16 @@
   "bugs": {
     "url": "https://github.com/rafaellaurindo/youtube-statistics-js/issues"
   },
-  "homepage": "https://github.com/rafaellaurindo/youtube-statistics-js#readme"
+  "homepage": "https://github.com/rafaellaurindo/youtube-statistics-js#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.11",
+    "prettier": "^1.16.4",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.1"
+  }
 }
